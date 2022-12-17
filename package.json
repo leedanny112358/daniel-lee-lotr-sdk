@@ -1,0 +1,24 @@
+{
+  "name": "daniel-lee-lotr-sdk",
+  "version": "1.0.0",
+  "description": "SDK wrapper in javascript for the one lotr api :)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "generate": "jest --init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leedanny112358/daniel-lee-lotr-sdk.git"
+  },
+  "keywords": [
+    "lotr"
+  ],
+  "author": "daniellee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leedanny112358/daniel-lee-lotr-sdk/issues"
+  },
+  "homepage": "https://github.com/leedanny112358/daniel-lee-lotr-sdk#readme"
+}
