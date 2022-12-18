@@ -5,7 +5,7 @@ npm install daniel-lee-lotr-sdk
 ```
 # Initialization
 ```
-import LotrSdk from 'daniel-lee-lotr-sdk';
+import { LotrSdk } from 'daniel-lee-lotr-sdk';
 
 const sdk = new LotrSdk(<YOUR_ACCESS_TOKEN_STRING>);
 ```
