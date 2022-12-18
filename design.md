@@ -68,5 +68,3 @@ highly used endpoint calls, we wouldn't have to reach out to the API as often.
 are actually fetching data properly within the `books.test.js` file and also testing the various pagination, sorting, and 
 filtering parameters within the `query.test.js` folder. These are not extensive tests and if I were to have more time, I 
 would most likely invest into writing more thorough tests as TDD is always a good idea.
-
-3. 
