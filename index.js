@@ -1,2 +1,3 @@
-import LotrSdk from "./src/LotrSdk.js"
-export default LotrSdk
+import LotrSdk from "./src/LotrSdk"
+import FiltersBuilder from "./src/FiltersBuilder.js"
+export { LotrSdk, FiltersBuilder }

@@ -1,11 +1,15 @@
 import Endpoint from "./Endpoint.js"
 class BookEndpoints extends Endpoint{
-  constructor(){
-    super("book")
+  constructor(httpHandler){
+    super("book",httpHandler)
   }
 
-  getAllChapters(bookId){
-    return this._http.get(`${this.base}/${bookId}/chapter`)
+  getAllChapters(bookId,params){
+    let url = `${this._base}/${bookId}/chapter`
+    if (params !== undefined) {
+      url += constructQueryString(params)
+    }
+    return this._http.get(url)
   }
 }
 

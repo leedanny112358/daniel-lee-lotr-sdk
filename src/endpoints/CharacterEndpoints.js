@@ -1,7 +1,7 @@
 import Endpoint from "./Endpoint.js"
 class CharacterEndpoints extends Endpoint{
-  constructor(){
-    super("character")
+  constructor(httpHandler){
+    super("character", httpHandler)
   }
 }
 

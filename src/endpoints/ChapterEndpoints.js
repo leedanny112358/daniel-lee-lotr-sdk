@@ -1,7 +1,7 @@
 import Endpoint from "./Endpoint.js"
 class ChapterEndpoints extends Endpoint{
-  constructor(){
-    super("chapter")
+  constructor(httpHandler){
+    super("chapter", httpHandler)
   }
 }
 

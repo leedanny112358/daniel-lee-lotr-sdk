@@ -8,7 +8,7 @@ class HttpHandler {
   async get(url) {
     try {
       const result = await fetch(`${LOTR_API_BASE_URL}/${url}`, {
-        headers: { Authorization: this._token },
+        headers: { 'Authorization': `Bearer ${this._token}` }
       });
       return await result.json();
     } catch (error) {

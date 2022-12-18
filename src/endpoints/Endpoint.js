@@ -1,15 +1,36 @@
-import HttpHandler from "../HttpHandler.js"
-
 class Endpoint {
-  constructor(base){
-    this._http = new HttpHandler()
-    this.base = base
+  constructor(base_endpoint, httpHandler) {
+    this._http = httpHandler
+    this._base = base_endpoint
   }
-  getAll(){
-    return this._http.get(this.base)
+
+  getAll(params) {
+    let url = this._base
+    if (params !== undefined) {
+      url += this._constructQueryString(params)
+    }
+    return this._http.get(url)
   }
-  getOneById(id){
-    return this._http.get(`${this.base}/${id}`) 
+
+  getOneById(id, params) {
+    let url = `${this._base}/${id}`
+    if (params !== undefined) {
+      url += this._constructQueryString(params)
+    }
+    return this._http.get(url)
+  }
+  
+  _constructQueryString(params) {
+    let queryArray = []
+    let paramsKeys = Object.keys(params)
+    paramsKeys.forEach((key, i) => {
+      let paramString = `${key}=${params[key]}`
+      if (key === "filters") {
+        paramString = params[key]
+      }
+      queryArray.push(paramString)
+    });
+    return  "?" + queryArray.join('&')
   }
 }
 
