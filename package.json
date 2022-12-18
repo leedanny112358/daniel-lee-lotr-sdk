@@ -1,6 +1,6 @@
 {
   "name": "daniel-lee-lotr-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SDK wrapper in javascript for the one lotr api :)",
   "main": "index.js",
   "type": "module",
